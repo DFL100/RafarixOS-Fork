@@ -4,5 +4,5 @@ https://raw.githubusercontent.com/xoanxc/RafarixOS/main/assets/PreLudeOSRedonded
 
 <span>![</span><span>Aquí la descripción de la imagen por si no carga</span><span>]</span><span>(</span><span>https://raw.githubusercontent.com/xoanxc/RafarixOS/main/assets/PreLudeOSRedonded.png</span><span>)</span>
 
-![RafarixOS](xoanxc/RafarixOS/main/assets/PreLudeOSRedonded.png)
+![RafarixOS](https://github.com/xoanxc/RafarixOS/blob/main/assets/PreLudeOSRedonded.png)
 
