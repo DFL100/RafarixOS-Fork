@@ -9,7 +9,7 @@ Recomendamos el uso de Rufus o similares para crear el medio de instalación.
 
 Rufus: https://github.com/pbatard/rufus
 
-La iso se distribuye de manera libre bajo los terminos de licencia GNU, por tanto la podeis encontrar en GitHub en caso de la versión CLI y en servidores externos en caso de la version ONE o Lite.
+La iso se distribuye de manera libre bajo los terminos de licencia GNU, por tanto la podeis encontrar en GitHub en caso de la versión CLI (Core) y en servidores externos en caso de la version ONE o Lite.
 
 Versión ONE:
 
