@@ -6,6 +6,7 @@ RafarixOS es una distribución de GNU/Linux creada desde 0, cuenta con las ultim
 
 # Guide
 Recomendamos el uso de Rufus o similares para crear el medio de instalación.
+
 Rufus: https://github.com/pbatard/rufus
 
 La iso se distribuye de manera libre bajo los terminos de licencia GNU, por tanto la podeis encontrar en GitHub en caso de la versión CLI y en servidores externos en caso de la version ONE o Lite.
