@@ -42,7 +42,7 @@ Tarjeta Grafica 128MB 600x800 px
 
 
 #### RafarixOS Core
-La versión Core de RafarixOS como su nombre indica el el nucleo desde donde se desarrollan las dos anteriores, no dispone de interfaz grafica por lo que es necesario un dominio alto de ella para poder moverse con soltura, al no disponer de estos añadidos esta versión es soportada por cualquier equipo minimamente actual, la recomendamos especialmente para servidores o por si alguien prefiere personalizar el sistema añadiendo un escritorio o paquetes distintos a los de las versiones oficiales.
+La versión Core de RafarixOS como su nombre indica es el nucleo desde donde se desarrollan las dos anteriores, no dispone de interfaz grafica por lo que es necesario un dominio alto de ella para poder moverse con soltura, al no disponer de estos añadidos esta versión es soportada por cualquier equipo minimamente actual, la recomendamos especialmente para servidores o por si alguien prefiere personalizar el sistema añadiendo un escritorio o paquetes distintos a los de las versiones oficiales.
 
 Sois totalmente libres de modificar el sistema.
 
