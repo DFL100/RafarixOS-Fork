@@ -17,7 +17,7 @@ La iso se distribuye de manera libre bajo los terminos de licencia GNU, por tant
 
 ### Guía Detallada
 
-https://github.com/pbatard/rufus
+[installation-guide](https://github.com/xoanxc/RafarixOS/blob/main/documentation/guide/installation-guide.md)
 
 # Features
 RafarixOS cuenta con 3 versiones diferentes:
