@@ -1,3 +1,5 @@
+//0.-Preparativos para comenzar con LFS
+
 usuario@ubuntu18:~$ su
 Contraseña: 
 root@ubuntu18:/home/usuario# echo $LFS
@@ -62,3 +64,5 @@ lfs@ubuntu18:~$ echo $LFS_TGT
 x86_64-lfs-linux-gnu
 lfs@ubuntu18:~$ echo $PATH
 /mnt/lfs/tools/bin:/bin:/usr/bin
+
+//1.-Compilación cruzada de herramientas temporales.
