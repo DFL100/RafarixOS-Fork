@@ -41,7 +41,7 @@ root@ubuntu18:/home/usuario# chown -v lfs $LFS/sources
 cambiado el propietario de '/mnt/lfs/sources' de root a lfs
 root@ubuntu18:/home/usuario# su - lfs
 
-//0.5.Preparamos todo para compilar todos los paquetes
+//0.1.Preparamos todo para compilar todos los paquetes
 
 lfs@ubuntu18:~$ cat > ~/.bash_profile << "EOF"
 > exec env -i HOME=$HOME TERM=$TERM PS1='\u:\w$ ' /bin/bash
@@ -69,3 +69,17 @@ lfs@ubuntu18:~$ echo $PATH
 /mnt/lfs/tools/bin:/bin:/usr/bin
 
 //1.-Compilación cruzada de herramientas temporales.
+
+lfs@ubuntu18:~$ echo $LFS
+/mnt/lfs
+lfs@ubuntu18:~$ echo $LC_ALL
+POSIX
+lfs@ubuntu18:~$ echo $LFS_TGT
+x86_64-lfs-linux-gnu
+lfs@ubuntu18:~$ echo $PATH
+/mnt/lfs/tools/bin:/bin:/usr/bin
+lfs@ubuntu18:~$ cd $LFS/sources
+
+//1.1.Descomprimir paquetes previamente creados
+
+
