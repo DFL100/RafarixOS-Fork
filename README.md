@@ -11,9 +11,13 @@ Rufus: https://github.com/pbatard/rufus
 
 La iso se distribuye de manera libre bajo los terminos de licencia GNU, por tanto la podeis encontrar en GitHub en caso de la versión CLI (Core) y en servidores externos (sourceforge.net) en caso de la version ONE o Lite.
 
-Versión ONE: https://sourceforge.net/projects/rafarixos/files/RafarixOS%20ONE/
+##### Versión ONE: https://sourceforge.net/projects/rafarixos/files/RafarixOS%20ONE/
 
-Versión Lite: https://sourceforge.net/projects/rafarixos/files/RafarixOS%20Lite/
+##### Versión Lite: https://sourceforge.net/projects/rafarixos/files/RafarixOS%20Lite/
+
+## Guía Detallada
+
+https://github.com/pbatard/rufus
 
 # Features
 RafarixOS cuenta con 3 versiones diferentes:
