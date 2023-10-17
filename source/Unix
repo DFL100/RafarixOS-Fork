@@ -35,3 +35,6 @@ root@ubuntu18:/home/usuario# case $(uname -m) in
 >  x86_64) chown -v lfs $LFS/lib64 ;;
 > esac
 cambiado el propietario de '/mnt/lfs/lib64' de root a lfs
+root@ubuntu18:/home/usuario# chown -v lfs $LFS/sources
+cambiado el propietario de '/mnt/lfs/sources' de root a lfs
+root@ubuntu18:/home/usuario# su - lfs
