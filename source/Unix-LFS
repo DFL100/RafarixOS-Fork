@@ -327,6 +327,25 @@ config.status: creating Makefile
 
 [Compilation1.2](https://github.com/xoanxc/RafarixOS/blob/main/source/compilations/compilation-1.2.2)
 
-//
+//Instalación
+
+lfs@ubuntu18:/mnt/lfs/sources/gcc-10.2.0/build$ make install
+make[1]: Entering directory '/mnt/lfs/sources/gcc-10.2.0/build'
+/bin/sh ../mkinstalldirs /mnt/lfs/tools /mnt/lfs/tools
+make[2]: Entering directory '/mnt/lfs/sources/gcc-10.2.0/build/fixincludes'
+rm -rf /mnt/lfs/tools/libexec/gcc/x86_64-lfs-linux-gnu/10.2.0/install-tools
+/bin/sh ../../fixincludes/../mkinstalldirs /mnt/lfs/tools/libexec/gcc/x86_64-lfs-linux-gnu/10.2.0/install-tools
+mkdir -p -- /mnt/lfs/tools/libexec/gcc/x86_64-lfs-linux-gnu/10.2.0/install-tools
+mkdir: cannot create directory '/mnt/lfs/tools/libexec': Permission denied
+Makefile:181: recipe for target 'install' failed
+make[2]: *** [install] Error 1
+make[2]: Leaving directory '/mnt/lfs/sources/gcc-10.2.0/build/fixincludes'
+Makefile:3797: recipe for target 'install-fixincludes' failed
+make[1]: *** [install-fixincludes] Error 2
+make[1]: Leaving directory '/mnt/lfs/sources/gcc-10.2.0/build'
+Makefile:2384: recipe for target 'install' failed
+make: *** [install] Error 2
+
+
 
 
