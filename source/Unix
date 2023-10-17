@@ -1,1 +1,37 @@
+usuario@ubuntu18:~$ su
+Contraseña: 
+root@ubuntu18:/home/usuario# echo $LFS
 
+root@ubuntu18:/home/usuario# export LFS=/mnt/lfs
+root@ubuntu18:/home/usuario# export LFS=/mnt/lfs
+root@ubuntu18:/home/usuario# echo $LFS
+/mnt/lfs
+root@ubuntu18:/home/usuario# mkdir -pv $LFS/{bin,etc,lib,sbin,usr,var}
+mkdir: se ha creado el directorio '/mnt/lfs/bin'
+mkdir: se ha creado el directorio '/mnt/lfs/etc'
+mkdir: se ha creado el directorio '/mnt/lfs/lib'
+mkdir: se ha creado el directorio '/mnt/lfs/sbin'
+mkdir: se ha creado el directorio '/mnt/lfs/usr'
+mkdir: se ha creado el directorio '/mnt/lfs/var'
+root@ubuntu18:/home/usuario# mkdir -pv $LFS/{bin,etc,lib,sbin,usr,var}
+root@ubuntu18:/home/usuario# case $(uname -m) in
+> x86_64) mkdir -pv $LFS/lib64 ;;
+> esac
+mkdir: se ha creado el directorio '/mnt/lfs/lib64'
+root@ubuntu18:/home/usuario# mkdir -v $LFS/tools
+mkdir: se ha creado el directorio '/mnt/lfs/tools'
+root@ubuntu18:/home/usuario# groupadd lfs
+root@ubuntu18:/home/usuario# useradd -s /bin/bash -g lfs -m -k /dev/null lfs
+root@ubuntu18:/home/usuario# passwd lfs
+Introduzca la nueva contraseña de UNIX: 
+Vuelva a escribir la nueva contraseña de UNIX: 
+passwd: contraseña actualizada correctamente
+root@ubuntu18:/home/usuario# chown -v lfs 
+chown: falta un operando después de «lfs»
+Pruebe 'chown --help' para más información.
+root@ubuntu18:/home/usuario# $LFS/{usr,lib,var,etc,bin,sbin,tools}
+bash: /mnt/lfs/usr: Es un directorio
+root@ubuntu18:/home/usuario# case $(uname -m) in
+>  x86_64) chown -v lfs $LFS/lib64 ;;
+> esac
+cambiado el propietario de '/mnt/lfs/lib64' de root a lfs
