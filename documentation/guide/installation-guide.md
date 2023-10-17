@@ -8,6 +8,6 @@ Comenzaremos por crear una unidad de arranque de RafarixOS, para empezar necesit
 
 ###### RafarixOS Lite: (https://sourceforge.net/projects/rafarixos/files/RafarixOS%20Lite/)
 
-Una vez con la unidad y la iso en nuestro equipo descargaremos la herramienta Rufus desde su repositorio [Rufus](https://github.com/pbatard/rufus) y procederemos al siguiente paso.
+Una vez con la unidad y la iso en nuestro equipo descargaremos la herramienta Rufus desde su repositorio [repositorio](https://github.com/pbatard/rufus) y procederemos al siguiente paso.
 
 Con todo listo ejecutaremos la herramienta Rufus
