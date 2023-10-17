@@ -38,3 +38,27 @@ cambiado el propietario de '/mnt/lfs/lib64' de root a lfs
 root@ubuntu18:/home/usuario# chown -v lfs $LFS/sources
 cambiado el propietario de '/mnt/lfs/sources' de root a lfs
 root@ubuntu18:/home/usuario# su - lfs
+lfs@ubuntu18:~$ cat > ~/.bash_profile << "EOF"
+> exec env -i HOME=$HOME TERM=$TERM PS1='\u:\w$ ' /bin/bash
+> EOF
+lfs@ubuntu18:~$ cat > ~/.bashrc << "EOF"
+> set +h
+> umask 022
+> LFS=/mnt/lfs
+> LC_ALL=POSIX
+> LFS_TGT=$(uname -m)-lfs-linux-gnu
+> PATH=/usr/bin
+> if [ ! -L /bin ]; then PATH=/bin:$PATH; fi
+> PATH=$LFS/tools/bin:$PATH
+> CONFIG_SITE=$LFS/usr/share/config.site
+> export LFS LC_ALL LFS_TGT PATH CONFIG_SITE
+> EOF
+lfs@ubuntu18:~$ source ~/.bash_profile
+lfs@ubuntu18:~$ echo $LFS
+/mnt/lfs
+lfs@ubuntu18:~$ echo $LC_ALL
+POSIX
+lfs@ubuntu18:~$ echo $LFS_TGT
+x86_64-lfs-linux-gnu
+lfs@ubuntu18:~$ echo $PATH
+/mnt/lfs/tools/bin:/bin:/usr/bin
