@@ -82,4 +82,8 @@ lfs@ubuntu18:~$ cd $LFS/sources
 
 //1.1.Descomprimir paquetes previamente creados
 
+lfs@ubuntu18:/mnt/lfs/sources$ tar -xf binutils-2.36.1.tar.xz
+lfs@ubuntu18:/mnt/lfs/sources$ cd binutils-2.36.1
+lfs@ubuntu18:/mnt/lfs/sources/binutils-2.36.1$ mkdir -v build 
+mkdir: created directory 'build'
 
