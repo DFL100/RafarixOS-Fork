@@ -15,7 +15,7 @@ La iso se distribuye de manera libre bajo los terminos de licencia GNU, por tant
 
 ##### Versión Lite: https://sourceforge.net/projects/rafarixos/files/RafarixOS%20Lite/
 
-## Guía Detallada
+### Guía Detallada
 
 https://github.com/pbatard/rufus
 
