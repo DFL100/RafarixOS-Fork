@@ -38,7 +38,7 @@ Esta versión trata de ofrecer una experiencia mas basica utilizando un escritor
 
 Procesador con 2 o mas nucleos a 1GHz
 
-Memoría RAM 2GB
+Memoría RAM 1GB
 
 Tarjeta Grafica 128MB 600x800 px
 
