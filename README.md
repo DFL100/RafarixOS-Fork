@@ -29,7 +29,7 @@ Procesador con 2 o mas nucleos a 2GHz
 
 Memoría RAM 2GB
 
-Tarjeta Grafica 128MB y 1280x720 px
+Tarjeta Grafica 128MB
 
 20GB de espacio libre en disco
 
@@ -40,7 +40,7 @@ Procesador con 2 o mas nucleos a 1GHz
 
 Memoría RAM 1GB
 
-Tarjeta Grafica 128MB 600x800 px
+Tarjeta Grafica 128MB
 
 15GB de espacio libre en disco
 
