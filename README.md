@@ -23,7 +23,7 @@ La iso se distribuye de manera libre bajo los terminos de licencia GNU, por tant
 RafarixOS cuenta con 3 versiones diferentes:
 
 ### RafarixOS ONE
-Esta versión incluye la experiencia mas "pura" de RafarixOS pero tambien la mas pesada por lo tanto no es tan recomendada para equipos antiguos, esta versión tiene unos requisitos de Hardware Medios, nosotros recomendamos duplicar estos requisitos:
+Esta versión incluye la experiencia mas "pura" de RafarixOS pero tambien la mas pesada por lo tanto no es tan recomendada para equipos antiguos, esta versión tiene unos requisitos de Hardware medios, nosotros recomendamos duplicar estos requisitos:
 
 Procesador con 2 o mas nucleos a 2GHz
 
