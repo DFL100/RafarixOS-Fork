@@ -34,7 +34,7 @@ Tarjeta Grafica 128MB y 1280x720 px
 20GB de espacio libre en disco
 
 ### RafarixOS Lite
-Esta versión trata de ofrecer una experiencia mas basica utilizando un escritorio mas sencillo el cual se trata de LXDE, con una apariencia menos atractiva pero manteniendo un muy buen rendimiento en equipos mas antiguos que no soporten muy bien la versión ONE, los requisitos son Minimos aunque recomendamos dulicar estos requisitos:
+Esta versión trata de ofrecer una experiencia mas basica utilizando un escritorio mas sencillo el cual se trata de LXDE, con una apariencia menos atractiva pero manteniendo un muy buen rendimiento en equipos mas antiguos que no soporten muy bien la versión ONE, los requisitos son minimos aunque recomendamos dulicarlos:
 
 Procesador con 2 o mas nucleos a 1GHz
 
