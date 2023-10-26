@@ -661,3 +661,74 @@ cd ..
 rm -rf perl-5.32.1
 
 //2.11.-Python
+
+tar -xvf Python-3.9.2.tar.xz
+cd Python-3.9.2
+
+./configure --prefix=/usr \
+ --enable-shared \
+ --without-ensurepip
+
+make
+make install
+
+cd ..
+rm -rf Python-3.9.2
+
+//2.12.- Texinfo
+
+tar -xvf texinfo-6.7.tar.xz
+cd texinfo-6.7
+
+./configure --prefix=/usr
+
+make
+make install
+
+cd ..
+
+rm -rf texinfo-6.7
+
+//2.13.-Util-linux
+
+tar -xvf util-linux-2.36.2.tar.xz
+cd util-linux-2.36.2
+
+mkdir -pv /var/lib/hwclock
+
+./configure ADJTIME_PATH=/var/lib/hwclock/adjtime \
+ --docdir=/usr/share/doc/util-linux-2.36.2 \
+ --disable-chfn-chsh \
+ --disable-login \
+ --disable-nologin \
+ --disable-su \
+ --disable-setpriv \
+ --disable-runuser \
+ --disable-pylibmount \
+ --disable-static \
+ --without-python \
+ runstatedir=/run
+
+make
+make install
+
+cd ..
+
+rm -rf util-linux-2.36.2
+
+//2.14.- Limpieza y Guardado del Sistema Temporal
+
+find /usr/{lib,libexec} -name \*.la -delete 
+rm -rf /usr/share/{info,man,doc}/* 
+exit
+umount $LFS/dev{/pts,}
+umount $LFS/{sys,proc,run}
+
+//2.14.1 Stripping
+
+strip --strip-debug $LFS/usr/lib/*
+strip --strip-unneeded $LFS/usr/{,s}bin/*
+strip --strip-unneeded $LFS/tools/bin/*
+
+//3. Construyendo el sistema LFS
+//3.1.- Pasos previos
