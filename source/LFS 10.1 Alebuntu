@@ -1,4 +1,4 @@
-//0.-Preparativos para comenzar con LFS
+.\" 0.-Preparativos para comenzar con LFS
 
 su
 echo $LFS
@@ -48,7 +48,7 @@ echo $LC_ALL
 echo $LFS_TGT
 echo $PATH
 
-//1.-Compilación cruzada de herramientas temporales.
+.\" 1.-Compilación cruzada de herramientas temporales.
 
 echo $LFS
 echo $LC_ALL
@@ -73,7 +73,7 @@ make install
 cd ../..
 rm -rf binutils-2.36.1
 
-//1.2.-GCC paso 1
+.\" 1.2.-GCC paso 1
 
 tar -xf gcc-10.2.0.tar.xz
 cd gcc-10.2.0
@@ -119,7 +119,7 @@ cat gcc/limitx.h gcc/glimits.h gcc/limity.h > \
 cd ..
 rm -rf gcc-10.2.0
 
-//1.3.-Linux 
+.\" 1.3.-Linux 
 
 tar -xvf linux-5.10.17.tar.xz
 cd linux-5.10.17 
@@ -131,7 +131,7 @@ cp -rv usr/include $LFS/usr
 cd ..
 rm -rf linux-5.10.17
 
-1.4.-Glibc
+.\" 1.4.-Glibc
 
 tar -xvf glibc-2.33.tar.xz
 cd glibc-2.33
@@ -162,7 +162,7 @@ $LFS/tools/libexec/gcc/$LFS_TGT/10.2.0/install-tools/mkheaders
 cd ../..
 rm -rf glibc-2.33
 
-//1.5.-Libstdc++ paso 1
+.\" 1.5.-Libstdc++ paso 1
 
 tar -xvf gcc-10.2.0.tar.xz
 cd gcc-10.2.0/
@@ -181,7 +181,7 @@ make DESTDIR=$LFS install
 cd ../..
 rm -rf gcc-10.2.0
 
-//1.6.-M4
+.\" 1.6.-M4
 
 tar -xvf m4-1.4.18.tar.xz
 cd m4-1.4.18
@@ -195,7 +195,7 @@ make DESTDIR=$LFS install
 cd ..
 rm -rf m4-1.4.18
 
-1.7.-Ncurses
+.\" 1.7.-Ncurses
 
 tar -xvf ncurses-6.2.tar.gz
 cd ncurses-6.2
@@ -224,7 +224,7 @@ ln -sfv ../../lib/$(readlink $LFS/usr/lib/libncursesw.so) $LFS/usr/lib/libncurse
 cd ..
 rm -rf ncurses-6.2
 
-//1.8.-Bash
+.\" 1.8.-Bash
 
 tar -xvf bash-5.1.tar.gz
 cd bash-5.1
@@ -239,7 +239,7 @@ ln -sv bash $LFS/bin/sh
 cd ..
 rm -rf bash-5.1
 
-//1.9.-Coreutils
+.\" 1.9.-Coreutils
 
 tar -xvf coreutils-8.32.tar.xz
 cd coreutils-8.32
@@ -261,7 +261,7 @@ sed -i 's/"1"/"8"/'
 cd ..
 rm -rf coreutils-8.32
 
-//1.10.-Diffutils
+.\" 1.10.-Diffutils
 
 tar -xvf diffutils-3.7.tar.xz 
 cd diffutils-3.7
@@ -271,7 +271,7 @@ make DESTDIR=$LFS install
 cd ..
 rm -rf diffutils-3.7
 
-//1.11.-File
+.\" 1.11.-File
 
 tar -xvf file-5.39.tar.gz
 cd file-5.39
@@ -301,7 +301,7 @@ sed -i 's|find:=${BINDIR}|find:=/bin|' $LFS/usr/bin/updatedb
 cd ..
 rm -rf findutils-4.8.0
 
-//1.13.-Gawk
+.\" 1.13.-Gawk
 
 tar -xvf gawk-5.1.0.tar.xz
 cd gawk-5.1.0
@@ -314,7 +314,7 @@ make DESTDIR=$LFS install
 cd ..
 rm -rf gawk-5.1.0
 
-//1.14.-Grep
+.\" 1.14.-Grep
 
 tar -xvf grep-3.6.tar.xz 
 cd grep-3.6
@@ -326,7 +326,7 @@ make DESTDIR=$LFS install
 cd ..
 rm -rf grep-3.6
 
-//1.15.-Gzip
+.\" 1.15.-Gzip
 
 tar -xvf gzip-1.10.tar.xz 
 cd gzip-1.10
@@ -337,7 +337,7 @@ mv -v $LFS/usr/bin/gzip $LFS/bin
 cd ..
 rm -rf gzip-1.10
 
-//1.16.-Make
+.\" 1.16.-Make
 
 tar -xvf make-4.3.tar.gz
 cd make-4.3
@@ -350,7 +350,7 @@ make DESTDIR=$LFS install
 cd ..
 rm -rf make-4.3
 
-//1.17.-Patch
+.\" 1.17.-Patch
 
 tar -xvf patch-2.7.6.tar.xz
 cd patch-2.7.6
@@ -362,7 +362,7 @@ make DESTDIR=$LFS install
 cd ..
 rm -rf patch-2.7.6
 
-//1.18.-Sed
+.\" 1.18.-Sed
 
 tar -xvf sed-4.8.tar.xz
 cd sed-4.8
@@ -374,7 +374,7 @@ make DESTDIR=$LFS install
 cd ..
 rm -rf sed-4.8
 
-//1.19.-Tar
+.\" 1.19.-Tar
 
 tar -xvf tar-1.34.tar.xz
 cd tar-1.34
@@ -387,7 +387,7 @@ make DESTDIR=$LFS install
 cd ..
 rm -rf tar-1.34
 
-//1.20.-Xz
+.\" 1.20.-Xz
 
 tar -xvf xz-5.2.5.tar.xz
 cd xz-5.2.5
@@ -404,7 +404,7 @@ ln -svf ../../lib/$(readlink $LFS/usr/lib/liblzma.so) $LFS/usr/lib/liblzma.so
 cd ..
 rm -rf xz-5.2.5
 
-//1.21.-Binutils paso 2
+.\" 1.21.-Binutils paso 2
 
 tar -xvf binutils-2.36.1.tar.xz
 cd binutils-2.36.1
@@ -424,7 +424,7 @@ install -vm755 libctf/.libs/libctf.so.0.0.0 $LFS/usr/lib
 cd ../..
 rm -rf binutils-2.36.1
 
-//1.22.-GCC paso 2
+.\" 1.22.-GCC paso 2
 
 tar -xvf gcc-10.2.0.tar.xz
 cd gcc-10.2.0/
@@ -466,28 +466,28 @@ ln -sv gcc $LFS/usr/bin/cc
 cd ../..
 rm -rf gcc-10.2.0
 
-//2.-Instalando el básico sistema de software
-//2.1.- Introducción
+.\" 2.-Instalando el básico sistema de software
+.\" 2.1.- Introducción
 
 su root
 
-//2.2.-Cambiando de propietario
+.\" 2.2.-Cambiando de propietario
 
 chown -R root:root $LFS/{usr,lib,var,etc,bin,sbin,tools}
 case $(uname -m) in
  x86_64) chown -R root:root $LFS/lib64 ;;
 esac
 
-//2.3.-Preparación de sistemas de archivos de kernel virtual
+.\" 2.3.-Preparación de sistemas de archivos de kernel virtual
 
 mkdir -pv $LFS/{dev,proc,sys,run}
 
-//2.3.1.-Creación de los nodos principales de los dispositivos
+.\" 2.3.1.-Creación de los nodos principales de los dispositivos
 
 mknod -m 600 $LFS/dev/console c 5 1
 mknod -m 666 $LFS/dev/null c 1 3
 
-//2.3.2.-Montaje y incorporación de /dev
+.\" 2.3.2.-Montaje y incorporación de /dev
 
 mount -v --bind /dev $LFS/dev
 
@@ -502,7 +502,7 @@ if [ -h $LFS/dev/shm ]; then
  mkdir -pv $LFS/$(readlink $LFS/dev/shm)
 fi
 
-//2.4.-Entrando en el enjaulado chroot
+.\" 2.4.-Entrando en el enjaulado chroot
 
 chroot "$LFS" /usr/bin/env -i \
  HOME=/root \
@@ -511,7 +511,7 @@ chroot "$LFS" /usr/bin/env -i \
  PATH=/bin:/usr/bin:/sbin:/usr/sbin \
  /bin/bash --login +h
 
-//2.5.-Creando estructura en el sistema de archivos lfs
+.\" 2.5.-Creando estructura en el sistema de archivos lfs
 
 mkdir -pv /{boot,home,mnt,opt,srv} 
 mkdir -pv /etc/{opt,sysconfig}
@@ -528,7 +528,7 @@ ln -sfv /run/lock /var/lock
 install -dv -m 0750 /root
 install -dv -m 1777 /tmp /var/tmp
 
-//2.6.-Creando los ficheros y enlaces necesarios
+.\" 2.6.-Creando los ficheros y enlaces necesarios
 
 ln -sv /proc/self/mounts /etc/mtab
 
@@ -584,7 +584,7 @@ chmod -v 600 /var/log/btmp
 
 cd sources
 
-//2.7.-Libstdc++ paso 2
+.\" 2.7.-Libstdc++ paso 2
 
 tar -xvf gcc-10.2.0.tar.xz
 
@@ -611,7 +611,7 @@ cd ../..
 
 rm -rf gcc-10.2.0
 
-//2.8.-Gettext
+.\" 2.8.-Gettext
 
 tar -xvf gettext-0.21.tar.xz
 cd gettext-0.21
@@ -625,7 +625,7 @@ cd ..
 
 rm -rf gettext-0.21
 
-//2.9.-Bison
+.\" 2.9.-Bison
 
 tar -xvf bison-3.7.5.tar.xz
 cd bison-3.7.5
@@ -639,7 +639,7 @@ cd ..
 
 rm -rf bison-3.7.5
 
-//2.10.-Perl
+.\" 2.10.-Perl
 
 tar -xvf perl-5.32.1.tar.xz
 cd perl-5.32.1
@@ -660,7 +660,7 @@ make install
 cd ..
 rm -rf perl-5.32.1
 
-//2.11.-Python
+.\" 2.11.-Python
 
 tar -xvf Python-3.9.2.tar.xz
 cd Python-3.9.2
@@ -675,7 +675,7 @@ make install
 cd ..
 rm -rf Python-3.9.2
 
-//2.12.- Texinfo
+.\" 2.12.- Texinfo
 
 tar -xvf texinfo-6.7.tar.xz
 cd texinfo-6.7
@@ -689,7 +689,7 @@ cd ..
 
 rm -rf texinfo-6.7
 
-//2.13.-Util-linux
+.\" 2.13.-Util-linux
 
 tar -xvf util-linux-2.36.2.tar.xz
 cd util-linux-2.36.2
@@ -716,7 +716,7 @@ cd ..
 
 rm -rf util-linux-2.36.2
 
-//2.14.- Limpieza y Guardado del Sistema Temporal
+.\" 2.14.- Limpieza y Guardado del Sistema Temporal
 
 find /usr/{lib,libexec} -name \*.la -delete 
 rm -rf /usr/share/{info,man,doc}/* 
@@ -724,11 +724,11 @@ exit
 umount $LFS/dev{/pts,}
 umount $LFS/{sys,proc,run}
 
-//2.14.1 Stripping
+.\" 2.14.1 Stripping
 
 strip --strip-debug $LFS/usr/lib/*
 strip --strip-unneeded $LFS/usr/{,s}bin/*
 strip --strip-unneeded $LFS/tools/bin/*
 
-//3. Construyendo el sistema LFS
-//3.1.- Pasos previos
+.\" 3. Construyendo el sistema LFS
+.\" 3.1.- Pasos previos
