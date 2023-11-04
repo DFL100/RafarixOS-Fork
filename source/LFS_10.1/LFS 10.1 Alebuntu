@@ -1005,7 +1005,7 @@ make install
 cd ..
 rm -rf bc-3.3.0
 
-.\"3.13.-Flex
+.\" 3.13.-Flex
 
 tar -xvf flex-2.6.4.tar.gz
 cd flex-2.6.4
@@ -1020,4 +1020,15 @@ ln -sv flex /usr/bin/lex
 
 cd ..
 rm -rf flex-2.6.4
+
+.\" 3.14.-Tcl
+
+tar -xvf tcl8.6.11-src.tar.gz
+cd tcl8.6.11
+cd unix
+SRCDIR=$(pwd)
+cd unix
+./configure --prefix=/usr \
+ --mandir=/usr/share/man \
+ $([ "$(uname -m)" = x86_64 ] && echo --enable-64bit)
 
