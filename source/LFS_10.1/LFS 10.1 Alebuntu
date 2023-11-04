@@ -1005,3 +1005,19 @@ make install
 cd ..
 rm -rf bc-3.3.0
 
+.\"3.13.-Flex
+
+tar -xvf flex-2.6.4.tar.gz
+cd flex-2.6.4
+./configure --prefix=/usr \
+--docdir=/usr/share/doc/flex-2.6.4 \
+--disable-static
+
+make
+make check
+make install
+ln -sv flex /usr/bin/lex
+
+cd ..
+rm -rf flex-2.6.4
+
