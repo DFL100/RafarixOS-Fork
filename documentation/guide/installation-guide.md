@@ -10,4 +10,6 @@ Comenzaremos por crear una unidad de arranque de RafarixOS, para empezar necesit
 
 Una vez con la unidad y la iso en nuestro equipo descargaremos la herramienta Rufus desde su [repositorio](https://github.com/pbatard/rufus) y procederemos al siguiente paso.
 
-Con todo listo ejecutaremos la herramienta Rufus y en un interfez seleccionaremos la iso y la unidad usb, le daremos a listo y el proceso comenzara.
+Con todo listo ejecutaremos la herramienta Rufus, en su sencilla interfaz seleccionaremos el medio y la .iso previamente descargada, con todo esto listo comenzaremos el proceso.
+
+*Imagen Orientativa
