@@ -1046,3 +1046,7 @@ sed -e "s|$SRCDIR/unix/pkgs/itcl4.2.1|/usr/lib/itcl4.2.1|" \
  -e "s|$SRCDIR/pkgs/itcl4.2.1|/usr/include|" \
  -i pkgs/itcl4.2.1/itclConfig.sh
 unset SRCDIR
+
+make test
+make install
+chmod -v u+w /usr/lib/libtcl8.6.so
