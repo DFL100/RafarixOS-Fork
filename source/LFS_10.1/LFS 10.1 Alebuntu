@@ -979,3 +979,29 @@ sed -i '/{OLDSUFF}/c:' support/shlib-install
 make SHLIB_LIBS="-lncursesw" install
 
 .\" 3.11.-M4
+
+tar -xvf m4-1.4.18.tar.xz
+cd m4-1.4.18
+sed -i 's/IO_ftrylockfile/IO_EOF_SEEN/' lib/*.c
+echo "#define _IO_IN_BACKUP 0x100" >> lib/stdio-impl.h
+
+./configure --prefix=/usr
+make
+make check 
+make install
+cd ..
+rm -rf m4-1.4.18
+
+.\"3.12.-Bc
+
+tar -xvf bc-3.3.0.tar.xz
+cd bc-3.3.0
+
+PREFIX=/usr CC=gcc ./configure.sh -G -O3
+
+make
+make test
+make install
+cd ..
+rm -rf bc-3.3.0
+
