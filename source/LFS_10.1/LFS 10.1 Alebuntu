@@ -934,3 +934,48 @@ ln -svf ../../lib/$(readlink /usr/lib/liblzma.so) /usr/lib/liblzma.so
 cd ..
 rm -rf xz-5.2.5
 
+.\" 3.8.-Zstd
+
+tar -xvf zstd-1.4.8.tar.gz
+cd zstd-1.4.8
+
+make
+make check
+make prefix=/usr install
+
+rm -v /usr/lib/libzstd.a
+mv -v /usr/lib/libzstd.so.* /lib
+ln -sfv ../../lib/$(readlink /usr/lib/libzstd.so) /usr/lib/libzstd.so
+
+cd ..
+rm -rf zstd-1.4.8
+
+.\" 3.9.-File
+
+tar -xvf file-5.39.tar.gz
+cd file-5.39
+./configure --prefix=/usr
+
+make
+make check
+make install
+
+cd ..
+rm -rf file-5.39
+
+.\" 3.10.-Readline
+
+tar -xvf readline-8.1.tar.gz
+cd readline-8.1
+
+sed -i '/MV.*old/d' Makefile.in
+sed -i '/{OLDSUFF}/c:' support/shlib-install
+
+./configure --prefix=/usr \
+ --disable-static \
+ --with-curses \
+ --docdir=/usr/share/doc/readline-8.1
+
+make SHLIB_LIBS="-lncursesw" install
+
+.\" 3.11.-M4
