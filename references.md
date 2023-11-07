@@ -32,8 +32,26 @@ Coreutils: https://www.gnu.org/software/coreutils/
 
 Diffutils: https://www.gnu.org/software/diffutils/
 
-File: https://www.gnu.org/software/make/
+File: https://distfiles.macports.org/file/
 
 Findutils: https://www.gnu.org/software/findutils/
 
 Gawk: https://www.gnu.org/software/gawk/
+
+Grep: https://www.gnu.org/software/grep/
+
+Gzip: https://www.gnu.org/software/gzip/
+
+Make: https://www.gnu.org/software/make/
+
+Patch: https://savannah.gnu.org/projects/patch/
+
+Sed: https://www.gnu.org/software/sed/
+
+Tar: https://www.gnu.org/software/tar/
+
+Xz: https://tukaani.org/xz/
+
+
+
+
