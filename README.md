@@ -52,5 +52,5 @@ Sois totalmente libres de modificar el sistema.
 
 # Releases
 
-Lanzamiento de RafarixOS Core BETA estimado para finales de 2023
+Lanzamiento de RafarixOS Core estimado para finales de 2023
 
