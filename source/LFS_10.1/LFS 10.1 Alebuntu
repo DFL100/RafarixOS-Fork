@@ -1145,3 +1145,5 @@ make install
 
 make install-html
 cd ..
+rm -rf gmp-6.2.1
+
