@@ -1299,3 +1299,7 @@ su tester -c "PATH=$PATH make -k check"
 
 make install
 
+rm -rf /usr/lib/gcc/$(gcc -dumpmachine)/10.2.0/include-fixed/bits/
+
+chown -v -R root:root \
+ /usr/lib/gcc/*linux-gnu/10.2.0/include{,-fixed}
