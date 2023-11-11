@@ -1446,3 +1446,16 @@ make install
 cd ..
 rm -rf bison-3.7.5
 
+.\" 3.32.-Grep
+
+tar -xvf grep-3.6.tar.xz
+cd grep-3.6
+./configure --prefix=/usr --bindir=/bin
+
+make 
+make check
+make install
+cd ..
+rm -rf grep-3.6
+
+.\" 3.33.-Bash
