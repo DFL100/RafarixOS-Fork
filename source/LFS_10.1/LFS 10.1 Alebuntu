@@ -1405,3 +1405,14 @@ cd ..
 rm -rf sed-4.8
 
 .\" 3.29.-Psmisc
+
+tar -xvf psmisc-23.4.tar.xz
+cd psmisc-23.4
+ ./configure --prefix=/usr
+make
+make install
+mv -v /usr/bin/fuser /bin
+mv -v /usr/bin/killall /bin
+
+cd ..
+rm -rf psmisc-23.4
