@@ -1416,3 +1416,33 @@ mv -v /usr/bin/killall /bin
 
 cd ..
 rm -rf psmisc-23.4
+
+.\" 3.30.-Gettext
+
+tar -xvf gettext-0.21.tar.xz
+cd gettext-0.21
+
+./configure --prefix=/usr \
+ --disable-static \
+ --docdir=/usr/share/doc/gettext-0.21
+
+make
+make check
+make install
+chmod -v 0755 /usr/lib/preloadable_libintl.so
+
+cd ..
+rm -rf gettext-0.21
+
+.\" 3.31.-Bison
+
+tar -xvf bison-3.7.5.tar.xz 
+cd bison-3.7.5
+./configure --prefix=/usr --docdir=/usr/share/doc/bison-3.7.5
+
+make
+make check
+make install
+cd ..
+rm -rf bison-3.7.5
+
