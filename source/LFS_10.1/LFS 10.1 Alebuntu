@@ -1303,3 +1303,16 @@ rm -rf /usr/lib/gcc/$(gcc -dumpmachine)/10.2.0/include-fixed/bits/
 
 chown -v -R root:root \
  /usr/lib/gcc/*linux-gnu/10.2.0/include{,-fixed}
+
+ln -sv ../usr/bin/cpp /lib
+
+ln -sfv ../../libexec/gcc/$(gcc -dumpmachine)/10.2.0/liblto_plugin.so \
+ /usr/lib/bfd-plugins/
+
+ln -sfv ../../libexec/gcc/$(gcc -dumpmachine)/10.2.0/liblto_plugin.so \
+ /usr/lib/bfd-plugins/
+
+echo 'int main(){}' > dummy.c
+cc dummy.c -v -Wl,--verbose &> dummy.log
+readelf -l a.out | grep ': /lib'
+
