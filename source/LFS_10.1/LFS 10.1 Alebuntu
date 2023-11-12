@@ -1692,3 +1692,29 @@ cd ..
 rm -rf elfutils-0.183
 
 .\" 3.46.-Libffi
+
+tar -xvf libffi-3.3.tar.gz
+cd libffi-3.3
+./configure --prefix=/usr --disable-static --with-gcc-arch=native
+
+make
+make check 
+make install
+cd ..
+rm -rf libffi-3.3
+
+.\" 3.47.-OpenSSL
+
+tar -xvf openssl-1.1.1j.tar.gz
+cd openssl-1.1.1j
+./config --prefix=/usr \
+ --openssldir=/etc/ssl \
+ --libdir=lib \
+ shared \
+ zlib-dynamic
+
+make
+make test
+sed -i '/INSTALL_LIBS/s/libcrypto.a libssl.a//' Makefile
+make MANSUFFIX=ssl install
+
