@@ -1486,3 +1486,23 @@ cd libtool-2.4.6
 make
 make check
 make install
+
+rm -fv /usr/lib/libltdl.a
+cd ..
+rm -rf libtool-2.4.6
+
+.\" 3.35.-GDBM
+
+tar -xvf gdbm-1.19.tar.gz
+cd gdbm-1.19
+
+./configure --prefix=/usr \
+ --disable-static \
+ --enable-libgdbm-compat
+
+make
+make check
+make install
+
+cd ..
+rm -rf gdbm-1.19
