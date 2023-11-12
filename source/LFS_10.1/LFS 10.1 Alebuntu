@@ -1637,3 +1637,17 @@ cd ..
 rm -rf autoconf-2.71
 
 .\" 3.43.-Automake
+
+tar -xvf automake-1.16.3.tar.xz
+cd automake-1.16.3
+sed -i "s/''/etags/" t/tags-lisp-space.sh
+./configure --prefix=/usr --docdir=/usr/share/doc/automake-1.16.3
+
+make
+make -j4 check 
+
+make install
+cd ..
+rm -rf automake-1.16.3
+
+.\" 3.44.-Kmod
