@@ -1706,7 +1706,9 @@ rm -rf libffi-3.3
 .\" 3.47.-OpenSSL
 
 tar -xvf openssl-1.1.1j.tar.gz
+tar -xvf openssl-1.1.1j.tar.gz
 cd openssl-1.1.1j
+
 ./config --prefix=/usr \
  --openssldir=/etc/ssl \
  --libdir=lib \
@@ -1718,3 +1720,33 @@ make test
 sed -i '/INSTALL_LIBS/s/libcrypto.a libssl.a//' Makefile
 make MANSUFFIX=ssl install
 
+mv -v /usr/share/doc/openssl /usr/share/doc/openssl-1.1.1j
+cp -vfr doc/* /usr/share/doc/openssl-1.1.1j
+
+cd ..
+rm -rf openssl-1.1.0i
+
+.\" 3.48.-Python 
+
+tar -xvf Python-3.9.2.tar.xz
+cd Python-3.9.2
+
+./configure --prefix=/usr \
+ --enable-shared \
+ --with-system-expat \
+ --with-system-ffi \
+ --with-ensurepip=yes
+
+make
+make test
+make install
+
+install -v -dm755 /usr/share/doc/python-3.9.2/html
+tar --strip-components=1 \
+ --no-same-owner \
+ --no-same-permissions \
+ -C /usr/share/doc/python-3.9.2/html \
+ -xvf ../python-3.9.2-docs-html.tar.bz2
+
+cd ..
+rm -rf Python-3.9.2
